@@ -2,7 +2,7 @@ body {
     color: #222;
     font-family: 'Source Serif Pro';
     font-size: 22px;
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
