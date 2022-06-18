@@ -42,8 +42,18 @@ blockquote.twitter-tweet::before {
 
 summary {
     display: block;
-    text-decoration: underline;
-    cursor: default;
+}
+
+summary::marker {
+    content: "";
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary u {
+    cursor: pointer;
 }
 
 /* .action {
@@ -72,6 +82,7 @@ img {
 
 .book-ranking img {
     margin: 0 auto;
+    max-width: 200px;
 }
 
 .book-ranking {
