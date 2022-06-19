@@ -162,6 +162,7 @@ figcaption {
 @media ( max-width: 960px ) {
     body {
         max-width: 590px;
+        font-size: 18px;
     }
 
     blockquote::before {
