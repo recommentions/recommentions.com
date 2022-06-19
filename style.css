@@ -1,26 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: #222;
     font-family: 'Source Serif Pro';
     font-size: 22px;
-    max-width: 1000px;
+    max-width: 960px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 a {
     color: currentColor;
 }
 
-blockquote, nav, details, figure {
+blockquote, nav, details, figure, p {
     margin: 0;
     margin-bottom: 1em;
 }
 
-nav {
-    margin-top: 1em;
-}
-
 blockquote {
     position: relative;
+    overflow-wrap: break-word;
 }
 
 blockquote::before {
@@ -90,18 +92,39 @@ img {
 }
 
 .book-ranking li {
-    display: flex;
     margin: 1em 0;
 }
 
 .book-detailed-mentions,
 .about,
 .on-reading {
-    margin: 2em 0;
+    margin: 1em 0;
 }
 
+.book-ranking li,
 .book-detailed-mentions,
 .on-reading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+
+.about-list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-main {
+    flex-basis: 550px;
+}
+
+.flex-side {
+    flex-basis: 340px;
+    margin-bottom: 1em;
+}
+
+.book-ranking .flex-side {
     display: flex;
 }
 
@@ -118,29 +141,55 @@ body > p {
     margin-left: 370px;
 }
 
-.on-reading blockquote {
-    margin-left: 70px;
-}
-
 .book-detailed-mentions ol {
     margin: 0;
-    margin-left: 70px;
 }
 
 .mentions-count {
-    flex: 0 0 100px;
+    width: 100px;
 }
 
 .mentions-count span {
     font-size: 3em;
 }
 
-figure {
-    margin: 0;
-}
-
 figcaption {
     font-size: .7em;
     margin-top: .5em;
     opacity: 0.7;
+}
+
+@media ( max-width: 960px ) {
+    body {
+        max-width: 590px;
+    }
+
+    blockquote::before {
+        content: "“";
+        position: absolute;
+        top: 0;
+        left: -.5em;
+        font-size: 1em;
+        font-size: 1.2em;
+    }
+
+    .flex-main,
+    .flex-side {
+        flex-basis: 550px;
+        max-width: 100%;
+    }
+
+    .book-ranking figure {
+        flex-grow: 1;
+    }
+
+    .book-ranking img {
+        margin: 0;
+        margin-left: auto;
+    }
+
+    img {
+        height: 150px;
+        width: auto;
+    }
 }
