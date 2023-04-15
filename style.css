@@ -107,6 +107,7 @@ img {
     margin: 1em 0;
 }
 
+.about-list,
 .book-ranking li,
 .book-detailed-mentions,
 .on-reading {
@@ -114,11 +115,6 @@ img {
     flex-wrap: wrap;
     justify-content: space-between;
     column-gap: 30px;
-}
-
-.about-list {
-    display: flex;
-    justify-content: flex-end;
 }
 
 .flex-main {
@@ -171,6 +167,7 @@ body > p {
 
 .mentions-count {
     width: 100px;
+    text-decoration: none;
 }
 
 .mentions-count span {
@@ -195,6 +192,26 @@ figcaption {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+img[src$="placeholder.png"] {
+    filter: invert(10%);
+}
+
+[data-fade="true"] {
+    max-height: 12.5em;
+    overflow: hidden;
+    position: relative;
+}
+
+[data-fade="true"]::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2em; /* Adjust this value based on your desired fade-out length */
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
 @media ( max-width: 960px ) {
