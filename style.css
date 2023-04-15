@@ -133,6 +133,22 @@ img {
 .book-ranking .flex-side {
     display: flex;
 }
+.load-more-books {
+    background: #fff;
+    font-size: 14px;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: currentColor;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.load-more-books:hover {
+    background: currentColor;
+    color: #fff;
+}
 
 li {
     margin-bottom: 2em;
