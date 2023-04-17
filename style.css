@@ -214,6 +214,10 @@ img[src$="placeholder.png"] {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
+.unquote {
+    font-style: italic;
+}
+
 @media ( max-width: 960px ) {
     body {
         max-width: 590px;
